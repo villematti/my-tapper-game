@@ -35,6 +35,9 @@
                                     <constraint firstAttribute="height" constant="142" id="DjS-XQ-Wfh"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="start-button-hi"/>
+                                <connections>
+                                    <action selector="onPlayBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aAU-yh-hid"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="How many taps to win?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IrJ-uR-Z4K" userLabel="tabsTextField">
                                 <rect key="frame" x="87" y="422" width="200" height="30"/>
@@ -43,7 +46,7 @@
                                     <constraint firstAttribute="height" constant="30" id="q8g-i5-WYs"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wNL-IF-6I1" userLabel="CoinButton">
                                 <rect key="frame" x="118" y="28" width="138" height="138"/>
@@ -52,6 +55,9 @@
                                     <constraint firstAttribute="width" constant="138" id="Ykz-Bh-vuV"/>
                                 </constraints>
                                 <state key="normal" image="my-tapper-1-cent"/>
+                                <connections>
+                                    <action selector="onCoinTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZyK-2t-h5U"/>
+                                </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000 Tabs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i43-Do-SdJ" userLabel="CoinsLabel">
                                 <rect key="frame" x="67" y="201" width="240" height="69"/>
@@ -60,8 +66,8 @@
                                     <constraint firstAttribute="width" constant="240" id="d8Q-eQ-t85"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="50"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -84,6 +90,13 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="howManyTapsTxt" destination="IrJ-uR-Z4K" id="xnb-PD-tfx"/>
+                        <outlet property="logoImg" destination="7vl-d5-4y0" id="ypB-bd-Taa"/>
+                        <outlet property="playBtn" destination="SN9-7U-1hG" id="c8t-LP-E9O"/>
+                        <outlet property="tabButton" destination="wNL-IF-6I1" id="NlF-K7-7gg"/>
+                        <outlet property="tabsLabel" destination="i43-Do-SdJ" id="Yvo-mx-mBX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
