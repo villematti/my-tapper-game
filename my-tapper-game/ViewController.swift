@@ -71,6 +71,24 @@ class ViewController: UIViewController {
         }
     }
     
+    // When view has been loaded.
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Create tapping recognizer with dismissKeyboard action
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        
+        // Add dismissKeyboard tap recognizer to view
+        view.addGestureRecognizer(tap)
+    }
+    
+    // CUSTOM FUNCTIONS
+    
+    // Make keyboard disapear when screen is tapped outside the keyboard.
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
     // Function for updating a label for current tabs.
     func updateTabsLabel() {
         tabsLabel.text = "\(currentTabs) Tabs"
